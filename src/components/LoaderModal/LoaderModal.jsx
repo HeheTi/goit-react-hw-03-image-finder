@@ -2,12 +2,12 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-import PropTypes from 'prop-types';
+
 import s from './LoaderModal.module.css';
 
 const loaderRef = document.querySelector('#loader-root');
 
-const LoaderModal = props => {
+const LoaderModal = () => {
   return createPortal(
     <div className={s.loader}>
       <Loader
@@ -21,7 +21,5 @@ const LoaderModal = props => {
     loaderRef,
   );
 };
-
-LoaderModal.propTypes = {};
 
 export default LoaderModal;
