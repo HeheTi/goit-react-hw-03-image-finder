@@ -1,7 +1,14 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-function Button(props) {
-  return <button className="Button">Load more</button>;
+function Button({ onClick }) {
+  return (
+    <button onClick={onClick} className="Button">
+      Load more
+    </button>
+  );
 }
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Button;

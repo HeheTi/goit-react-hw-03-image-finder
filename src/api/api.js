@@ -8,7 +8,7 @@ function fetchImagesApi(serchName, page = 1) {
       return response.json();
     }
 
-    return Promise.reject(new Error(`No img`));
+    return Promise.reject(new Error(`Something went wrong`));
   });
 }
 

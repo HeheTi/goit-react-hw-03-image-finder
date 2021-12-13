@@ -76,7 +76,7 @@ img {
   width: 48px;
   height: 48px;
   border: 0;
-  background-image: url('https://www.flaticon.com/premium-icon/loupe_2120967?term=search&page=1&position=7&page=1&position=7&related_id=2120967&origin=search');
+  background-image: url('./image/search.svg');
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;

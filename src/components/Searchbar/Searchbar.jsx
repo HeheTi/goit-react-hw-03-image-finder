@@ -12,9 +12,14 @@ class Searchbar extends Component {
   onSubmitForm = e => {
     e.preventDefault();
     this.props.onSubmit(this.state.serchName);
+    this.resetForm();
   };
 
+  resetForm = () => this.setState({ serchName: '' });
+
   render() {
+    const { serchName } = this.state;
+
     return (
       <header className="Searchbar">
         <form onSubmit={this.onSubmitForm} className="SearchForm">
@@ -29,7 +34,7 @@ class Searchbar extends Component {
             autoFocus
             onChange={this.onChangeSerchName}
             placeholder="Search images and photos"
-            value={this.state.serchName}
+            value={serchName}
           />
         </form>
       </header>
@@ -37,6 +42,8 @@ class Searchbar extends Component {
   }
 }
 
-Searchbar.propTypes = {};
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default Searchbar;
